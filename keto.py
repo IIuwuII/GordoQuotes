@@ -48,6 +48,7 @@ try:
         embed.add_field(name="Send one of Keto's finest quotes.", value=";ketoquote", inline=False)
         embed.add_field(name="Send one of Human's finest quotes.", value=";humanquote", inline=False)
         embed.add_field(name="Send one of Gay Nasa's finest quotes.", value=";gaynasaquote", inline=False)
+        embed.add_field(name="Send one of Gordo's finest quotes.", value=";gordoquote", inline=False)
         embed.add_field(name="Ask the magic 8-Ball a question.", value=";m8b [question]", inline=False)
         embed.add_field(name="Links the Keto Bot repository.", value=";github", inline=False)
         embed.add_field(name="Make Keto say something. (Owner only)", value=";say [text]", inline=False)
@@ -112,6 +113,13 @@ try:
         await ctx.send(random.choice(messages))
         print (f"{ctx.message.author.name} requested a Gay Nasa quote in {ctx.guild.name}!")
     # Gay Nasa Quotes
+
+    @bot.command(pass_context=True)
+    async def gordoquote(ctx):
+        messages = quotes.gordo
+        await ctx.send(random.choice(messages))
+        print (f"{ctx.message.author.name} requested a Gordo quote in {ctx.guild.name}!")
+    # Gordo Quotes
 
 except:
     pass
