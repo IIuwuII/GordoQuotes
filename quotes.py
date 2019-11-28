@@ -62,4 +62,6 @@ human = ["I don’t wanna give myself dev role because that’s gonna just make 
 
 
 gaynasa = ["bruh wtf is non binary what are u hexadecimal?",
-          "imagine using a keyboard layout that isnt qwertyuiop"]
+          "imagine using a keyboard layout that isnt qwertyuiop",
+          "furries don't have dicks they have micro penis dipped in gay cum",
+          "I'm An Alabama gamer and I want to be free--Phat Ass White Girls DM Me"]
