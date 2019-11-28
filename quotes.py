@@ -66,3 +66,12 @@ gaynasa = ["bruh wtf is non binary what are u hexadecimal?",
           "furries don't have dicks they have micro penis dipped in gay cum",
           "I'm An Alabama gamer and I want to be free",
           "Phat Ass White Girls DM Me"]
+
+gordo = ["Can we warn this guy ?",
+        "DDLC-IOS > ShortLook",
+        "Kanye is the most influencial artist of our generation !",
+        "Link of BetterDiscord Windows",
+        "im going to sleep 1 more hour. Dont wake me up",
+        "how is this allowed in here?",
+        "I hate that Dieter guys",
+        "@AppleBetas Who are you ?"]
