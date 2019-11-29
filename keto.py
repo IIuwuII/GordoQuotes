@@ -3,6 +3,8 @@ from discord.ext import commands
 import random
 import config
 import quotes
+import asyncio
+from discord.ext.commands import cooldown
  
 print('  _  __    _        ____        _   ')
 print(' | |/ /___| |_ ___ | __ )  ___ | |_ ')
@@ -37,7 +39,7 @@ try:
         if 637090083144728576 == ctx.message.author.id:
             return True
         else:
-            await ctx.send("You don't have permission to run that command.")
+            await ctx.send(f"<@{ctx.author.id}> is not in the sudoers file. This incident will be reported.")
     # A secondary check to ensure nobody but the owner can run these commands.
     # @commands.check(self_check)
  
@@ -120,6 +122,34 @@ try:
         await ctx.send(random.choice(messages))
         print (f"{ctx.message.author.name} requested a Gordo quote in {ctx.guild.name}!")
     # Gordo Quotes
+
+    @bot.command(pass_context=True)
+    @cooldown(1, 16)  # 1000 second cooldown
+    async def gordoalt(ctx):
+        message = await ctx.send('**SCANNING FOR GORDO ALTS...**')
+        await asyncio.sleep(2)
+        await message.edit(content='**10%** [▰▱▱▱▱▱▱▱▱▱]')
+        await asyncio.sleep(0.5)
+        await message.edit(content='**20%** [▰▰▱▱▱▱▱▱▱▱]')
+        await asyncio.sleep(0.5)
+        await message.edit(content='**30%** [▰▰▰▱▱▱▱▱▱▱]')
+        await asyncio.sleep(1)
+        await message.edit(content='**40%** [▰▰▰▰▱▱▱▱▱▱]')
+        await asyncio.sleep(2)
+        await message.edit(content='**50%** [▰▰▰▰▰▱▱▱▱▱]')
+        await asyncio.sleep(1)
+        await message.edit(content='**60%** [▰▰▰▰▰▰▱▱▱▱]')
+        await asyncio.sleep(0.5)
+        await message.edit(content='**70%** [▰▰▰▰▰▰▰▱▱▱]')
+        await asyncio.sleep(0.5)
+        await message.edit(content='**80%** [▰▰▰▰▰▰▰▰▱▱]')
+        await asyncio.sleep(1)
+        await message.edit(content='**90%** [▰▰▰▰▰▰▰▰▰▱]')
+        await asyncio.sleep(2)
+        await message.edit(content='**100%** [▰▰▰▰▰▰▰▰▰▰]')
+        complete = ["**[1] GORDO ALTS DETECTED**", "**758 MEMBERS SCANNED, 1 GORDO ALT FOUND**", "**ATTENTION ALL ADMINS: GORDO ALT IN GENERAL!**"]
+        await message.edit(content=random.choice(complete))
+    # Scan for Gordo Alts
 
 except:
     pass
