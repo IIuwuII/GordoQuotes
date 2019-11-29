@@ -148,6 +148,7 @@ try:
         await message.edit(content='```90%  [▰▰▰▰▰▰▰▰▰▱]```')
         await asyncio.sleep(2)
         await message.edit(content='```100% [▰▰▰▰▰▰▰▰▰▰]```')
+        await asyncio.sleep(2)
         complete = ["```[1] GORDO ALTS DETECTED```", "```758 MEMBERS SCANNED, 1 GORDO ALT FOUND```", "```ATTENTION ALL ADMINS: GORDO ALT IN GENERAL!```"]
         await message.edit(content=random.choice(complete))
     # Scan for Gordo Alts
