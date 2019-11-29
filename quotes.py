@@ -41,7 +41,8 @@ keto = ["Fuck Gordo",
          "toilet repo gaY /s",
          "just fucking unmute me and go jerk off",
          "fuck 7-zip",
-         "someone please tell me how to stop altstore from crashing"]
+         "someone please tell me how to stop altstore from crashing",
+         "bruh all my quotes areunder gpl-3"]
 
 
 human = ["I don’t wanna give myself dev role because that’s gonna just make me sad", 
@@ -79,3 +80,19 @@ gordo =  ["Can we warn this guy ?",
          "how is this allowed in here?",
          "I hate that Dieter guys",
          "<@585955457781202964> Who are you ?"]
+
+rams =   ["Big dicks make me feel like I'm gagging but from my rectum instead of my throat",
+          "gay",
+          "Well a13 gay",
+          "imagine thinking that I’m actually gay",
+          "my ass isn’t an entry",
+          "Stfu this isn’t gay bot",
+          "can I succ ur gfs dick",
+          "Bussy",
+          "don’t fuck cydia, fuck me instead!",
+          "Upvote if you fucked yourself with your own dick",
+          "We don’t race cysts here",
+          "too bad nepcord was deleted otherwise you would have gotten fag level quotes",
+          "canceling your free succ credits",
+          "petition to bring back #gordonudes"]
+        

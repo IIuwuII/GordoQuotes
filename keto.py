@@ -121,6 +121,13 @@ try:
     # Gordo Quotes
 
     @bot.command(pass_context=True)
+    async def ramsquote(ctx):
+        messages = quotes.rams
+        await ctx.send(random.choice(messages))
+        print (f"{ctx.message.author.name} requested a Dieter Rams quote in {ctx.guild.name}!")
+    # Diet Rams Quotes
+
+    @bot.command(pass_context=True)
     @cooldown(1, 16)  # 1000 second cooldown
     async def gordoalt(ctx):
         message = await ctx.send('```SCANNING FOR GORDO ALTS...```')
