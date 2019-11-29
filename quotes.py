@@ -58,7 +58,8 @@ human = ["I don’t wanna give myself dev role because that’s gonna just make 
          "furry =/ lgbtq", 
          "Thank you keto, very cool!", 
          "electra bootlooped my xs max help",
-         "do you know what a pull request is, nigga?"]
+         "do you know what a pull request is, nigga?",
+         "Keto~~Bot~~ will be triggered ~~by doing ;nigga~~"]
 
 
 gaynasa = ["bruh wtf is non binary what are u hexadecimal?",
