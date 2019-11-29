@@ -68,7 +68,8 @@ gaynasa = ["bruh wtf is non binary what are u hexadecimal?",
           "imagine using a keyboard layout that isnt qwertyuiop",
           "furries don't have dicks they have micro penis dipped in gay cum",
           "I'm An Alabama gamer and I want to be free",
-          "Phat Ass White Girls DM Me"]
+          "Phat Ass White Girls DM Me",
+          "niggas has extra chromosomes"]
 
 gordo =  ["Can we warn this guy ?",
          "DDLC-IOS > ShortLook",
