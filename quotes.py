@@ -40,7 +40,8 @@ keto = ["Fuck Gordo",
          "gordo said castyte was gay", 
          "toilet repo gaY /s",
          "just fucking unmute me and go jerk off",
-         "fuck 7-zip"]
+         "fuck 7-zip",
+         "someone please tell me how to stop altstore from crashing"]
 
 
 human = ["I don’t wanna give myself dev role because that’s gonna just make me sad", 
