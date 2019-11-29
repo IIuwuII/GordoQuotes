@@ -127,6 +127,7 @@ try:
     @cooldown(1, 16)  # 1000 second cooldown
     async def gordoalt(ctx):
         message = await ctx.send('```SCANNING FOR GORDO ALTS...```')
+        await message.edit(content='```SCANNING FOR GORDO ALTS...```')
         await asyncio.sleep(2)
         await message.edit(content='```10%  [▰▱▱▱▱▱▱▱▱▱]```')
         await asyncio.sleep(0.5)
