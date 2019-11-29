@@ -48,7 +48,7 @@ try:
         embed=discord.Embed(title="Gordo Quotes", url="https://toilet.cat/", description="Quoting bitches since 2019.", color=0xffffff)
         embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/xstecky.github.io/master/toilet_cat.gif")
         embed.add_field(name="Prefix", value="``;``", inline=False)
-        embed.add_field(name="Quotes", value="``ketoquote`` ``humanquote`` ``gaynasaquote`` ``gordoquote``", inline=False)
+        embed.add_field(name="Quotes", value="``ketoquote`` ``humanquote`` ``gaynasaquote`` ``gordoquote`` ``ramsquote``", inline=False)
         embed.add_field(name="Fun", value="``m8b`` ``gordoalt``", inline=True)
         embed.add_field(name="Info", value="``github``", inline=True)
         embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
