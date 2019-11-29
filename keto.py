@@ -52,6 +52,7 @@ try:
         embed.add_field(name="Send one of Gay Nasa's finest quotes.", value=";gaynasaquote", inline=False)
         embed.add_field(name="Send one of Gordo's finest quotes.", value=";gordoquote", inline=False)
         embed.add_field(name="Ask the magic 8-Ball a question.", value=";m8b [question]", inline=False)
+        embed.add_field(name="Scan for Gordo alts.", value=";gordoalt", inline=False)
         embed.add_field(name="Links the Keto Bot repository.", value=";github", inline=False)
         embed.add_field(name="Make Keto say something. (Owner only)", value=";say [text]", inline=False)
         embed.add_field(name="Change the game status. (Owner only)", value=";changegame [text]", inline=False)
