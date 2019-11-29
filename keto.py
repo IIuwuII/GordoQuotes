@@ -37,7 +37,7 @@ try:
         if 637090083144728576 == ctx.message.author.id:
             return True
         else:
-            return False
+            await ctx.send("You don't have permission to run that command.")
     # A secondary check to ensure nobody but the owner can run these commands.
     # @commands.check(self_check)
  
