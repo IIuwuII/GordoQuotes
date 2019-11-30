@@ -60,7 +60,7 @@ try:
 
     @bot.command(pass_context=True)
     async def m8b(ctx):
-        messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no.", "Yes – definitely.", "Bruh. Really?", "Star Keto Bot on GitHub, then I'll answer.", "Error 523: Can't reach toilet.cat/8banswers.json", "Don't count on it."]
+        messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no.", "Yes – definitely.", "Bruh. Really?", "Star Keto Bot on GitHub, then I'll answer.", "Error 523: Can't reach toilet.cat/8banswers.json", "Don't count on it.", "I need a Juul hit before I can give an accurate answer."]
         m8b = (ctx.message.content)
         embed=discord.Embed(title="Magic 8-Ball")
         embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/Keto-Bot/master/8ballgordo.png")
