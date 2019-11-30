@@ -8,7 +8,8 @@ If you want to this bot yourself you'll need to create a ``config.py`` file with
     prefix =  ';'
     
 ### Credit
-
 [TheRealKeto](https://github.com/TheRealKeto)
+
 [Human1895](https://github.com/Human1895)
+
 [Cr3atable](https://github.com/Cr3atable)
