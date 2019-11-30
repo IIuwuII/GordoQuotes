@@ -6,6 +6,9 @@ import quotes
 import asyncio
 from discord.ext.commands import cooldown
 import string
+import datetime
+
+start_time = datetime.datetime.utcnow() # Timestamp of when it came online
  
 print('  _  __    _        ____        _   ')
 print(' | |/ /___| |_ ___ | __ )  ___ | |_ ')
@@ -44,6 +47,16 @@ async def self_check(ctx):
 
 @bot.command()
 async def help(ctx):
+    now = datetime.datetime.utcnow() # Timestamp of when uptime function is run
+    delta = now - start_time
+    hours, remainder = divmod(int(delta.total_seconds()), 3600)
+    minutes, seconds = divmod(remainder, 60)
+    days, hours = divmod(hours, 24)
+    if days:
+        time_format = "{d} days, {h} hours, {m} minutes, and {s} seconds."
+    else:
+        time_format = "{h} hours, {m} minutes, and {s} seconds."
+    uptime_stamp = time_format.format(d=days, h=hours, m=minutes, s=seconds)
     embed=discord.Embed(title="Gordo Quotes", url="https://toilet.cat/", description="Quoting bitches since 2019.")
     embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/xstecky.github.io/master/toilet_cat.gif")
     embed.add_field(name="Prefix", value="``;``", inline=False)
@@ -51,7 +64,7 @@ async def help(ctx):
     embed.add_field(name="Fun", value="``m8b`` ``gordoalt``", inline=True)
     embed.add_field(name="Info", value="``github``", inline=True)
     embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
-    embed.set_footer(text="© Toilet Cat Technologies")
+    embed.set_footer(text="© Toilet Cat Technologies | {}".format(uptime_stamp))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested the help embed in {ctx.guild.name}!")
 
