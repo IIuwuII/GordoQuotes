@@ -55,7 +55,7 @@ async def help(ctx):
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested the help embed in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 async def m8b(ctx):
     messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no.", "Yes – definitely.", "Bruh. Really?", "Star Keto Bot on GitHub, then I'll answer.", "Error 523: Can't reach toilet.cat/8banswers.json", "Don't count on it.", "I need a Juul hit before I can give an accurate answer."]
     m8b = (ctx.message.content)
@@ -68,30 +68,30 @@ async def m8b(ctx):
     print (f"{ctx.message.author.name} used the magic 8-Ball in {ctx.guild.name}! ({ctx.message.content})")
 
 @commands.check(self_check)
-@bot.command(ctx)
+@bot.command()
 async def say(ctx, *, text):
     await ctx.send(text)
     print (f"{ctx.message.author.name} used the say command in {ctx.guild.name}! ({ctx.message.content})")
 
-@bot.command(ctx)
+@bot.command()
 async def github(ctx):
     await ctx.send('https://github.com/xstecky/Keto-Bot')
     print (f"{ctx.message.author.name} requested the GitHub URL in {ctx.guild.name}!")
 
 @commands.check(self_check)
-@bot.command(ctx)
+@bot.command()
 async def changegame(ctx, *, text):
     await bot.change_presence(activity=discord.Game(name=(text)))
     await ctx.send('done :zany_face:')
     print (f"{ctx.message.author.name} changed Keto's status in {ctx.guild.name}! ({ctx.message.content})")
 
 @commands.check(self_check)
-@bot.command(ctx)
+@bot.command()
 async def debug(ctx):
     await ctx.send('fuck <@643943061893808148> :rage:')
     print (f"{ctx.message.author.name} debugged in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 async def ketoquote(ctx):
     messages = quotes.keto
     embed=discord.Embed(title="", description=random.choice(messages))
@@ -99,7 +99,7 @@ async def ketoquote(ctx):
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Keto quote in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 async def humanquote(ctx):
     messages = quotes.human
     embed=discord.Embed(title="", description=random.choice(messages))
@@ -107,7 +107,7 @@ async def humanquote(ctx):
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Human quote in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 async def gaynasaquote(ctx):
     messages = quotes.gaynasa
     embed=discord.Embed(title="", description=random.choice(messages))
@@ -115,7 +115,7 @@ async def gaynasaquote(ctx):
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Gay Nasa quote in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 async def gordoquote(ctx):
     messages = quotes.gordo
     embed=discord.Embed(title="", description=random.choice(messages))
@@ -123,7 +123,7 @@ async def gordoquote(ctx):
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Gordo quote in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 async def ramsquote(ctx):
     messages = quotes.rams
     embed=discord.Embed(title="", description=random.choice(messages))
@@ -131,11 +131,11 @@ async def ramsquote(ctx):
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Dieter Rams quote in {ctx.guild.name}!")
 
-@bot.command(ctx)
+@bot.command()
 @cooldown(1, 16)  # 1000 second cooldown
 async def gordoalt(ctx):
-    message = await ctx.send('"""SCANNING FOR GORDO ALTS..."""')
-    await message.edit(content='"""SCANNING FOR GORDO ALTS..."""')
+    message = await ctx.send('SCANNING FOR GORDO ALTS...')
+    await message.edit(content='SCANNING FOR GORDO ALTS...')
     await asyncio.sleep(2)
     await message.edit(content='10%  [▰▱▱▱▱▱▱▱▱▱]')
     await asyncio.sleep(0.5)
