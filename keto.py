@@ -5,6 +5,7 @@ import config
 import quotes
 import asyncio
 from discord.ext.commands import cooldown
+import string
  
 print('  _  __    _        ____        _   ')
 print(' | |/ /___| |_ ___ | __ )  ___ | |_ ')
@@ -60,8 +61,9 @@ try:
     @bot.command(pass_context=True)
     async def m8b(ctx):
         messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no."]
+        m8b = (ctx.message.content)
         embed=discord.Embed(title="Magic 8-Ball")
-        embed.add_field(name="Question:", value=(ctx.message.content), inline=False)
+        embed.add_field(name="Question:", value=(m8b.replace(';m8b','')), inline=False)
         embed.add_field(name="Answer:", value=(random.choice(messages)), inline=False)
         embed.set_footer(text="Asked by {}".format(ctx.message.author.name))
         await ctx.send(embed=embed)
