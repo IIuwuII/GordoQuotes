@@ -61,20 +61,20 @@ async def help(ctx):
     embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/xstecky.github.io/master/toilet_cat.gif")
     embed.add_field(name="Prefix", value="``;``", inline=False)
     embed.add_field(name="Quotes", value="``ketoquote`` ``humanquote`` ``gaynasaquote`` ``gordoquote`` ``ramsquote``", inline=False)
-    embed.add_field(name="Fun", value="``m8b`` ``gordoalt``", inline=True)
+    embed.add_field(name="Fun", value="``8b`` ``gordoalt``", inline=True)
     embed.add_field(name="Info", value="``github``", inline=True)
     embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
     embed.set_footer(text="© Toilet Cat Technologies | {}".format(uptime_stamp))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested the help embed in {ctx.guild.name}!")
 
-@bot.command()
-async def m8b(ctx):
+@bot.command(name='8b')
+async def _8b(ctx):
     messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no.", "Yes – definitely.", "Bruh. Really?", "Star Keto Bot on GitHub, then I'll answer.", "Error 523: Can't reach toilet.cat/8banswers.json", "Don't count on it.", "I need a Juul hit before I can give an accurate answer."]
     m8b = (ctx.message.content)
     embed=discord.Embed(title="Magic 8-Ball")
     embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/Keto-Bot/master/8ballgordo.png")
-    embed.add_field(name="Question:", value=(m8b.replace(';m8b','')), inline=False)
+    embed.add_field(name="Question:", value=(m8b.replace(';8b','')), inline=False)
     embed.add_field(name="Answer:", value=(random.choice(messages)), inline=False)
     embed.set_footer(text="Asked by {}".format(ctx.message.author.name))
     await ctx.send(embed=embed)
