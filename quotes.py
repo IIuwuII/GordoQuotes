@@ -42,7 +42,9 @@ keto = ["Fuck Gordo",
          "just fucking unmute me and go jerk off",
          "fuck 7-zip",
          "someone please tell me how to stop altstore from crashing",
-         "bruh all my quotes areunder gpl-3"]
+         "bruh all my quotes areunder gpl-3",
+         "im done with this gay bot",
+         "haha its funny to see keto angry LMAO"]
 
 
 human = ["I don’t wanna give myself dev role because that’s gonna just make me sad", 
