@@ -108,7 +108,7 @@ async def debug(ctx):
 async def ketoquote(ctx):
     messages = quotes.keto
     embed=discord.Embed(title="", description=random.choice(messages))
-    embed.set_footer(text="Keto requested by {}".format(ctx.message.author.name))
+    embed.set_footer(text="Keto quote requested by {}".format(ctx.message.author.name))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Keto quote in {ctx.guild.name}!")
 
@@ -116,7 +116,7 @@ async def ketoquote(ctx):
 async def humanquote(ctx):
     messages = quotes.human
     embed=discord.Embed(title="", description=random.choice(messages))
-    embed.set_footer(text="Human requested by {}".format(ctx.message.author.name))
+    embed.set_footer(text="Human quote requested by {}".format(ctx.message.author.name))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Human quote in {ctx.guild.name}!")
 
@@ -124,7 +124,7 @@ async def humanquote(ctx):
 async def gaynasaquote(ctx):
     messages = quotes.gaynasa
     embed=discord.Embed(title="", description=random.choice(messages))
-    embed.set_footer(text="Gay Nasa requested by {}".format(ctx.message.author.name))
+    embed.set_footer(text="Gay Nasa quote requested by {}".format(ctx.message.author.name))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Gay Nasa quote in {ctx.guild.name}!")
 
@@ -132,7 +132,7 @@ async def gaynasaquote(ctx):
 async def gordoquote(ctx):
     messages = quotes.gordo
     embed=discord.Embed(title="", description=random.choice(messages))
-    embed.set_footer(text="Gordo requested by {}".format(ctx.message.author.name))
+    embed.set_footer(text="Gordo quote requested by {}".format(ctx.message.author.name))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Gordo quote in {ctx.guild.name}!")
 
@@ -140,7 +140,7 @@ async def gordoquote(ctx):
 async def ramsquote(ctx):
     messages = quotes.rams
     embed=discord.Embed(title="", description=random.choice(messages))
-    embed.set_footer(text="Dieter Rams requested by {}".format(ctx.message.author.name))
+    embed.set_footer(text="Dieter Rams quote requested by {}".format(ctx.message.author.name))
     await ctx.send(embed=embed)
     print (f"{ctx.message.author.name} requested a Dieter Rams quote in {ctx.guild.name}!")
 
