@@ -60,7 +60,11 @@ try:
     @bot.command(pass_context=True)
     async def m8b(ctx):
         messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no."]
-        await ctx.send(random.choice(messages))
+        embed=discord.Embed(title="Magic 8-Ball")
+        embed.add_field(name="Question:", value=(ctx.message.content), inline=False)
+        embed.add_field(name="Answer:", value=(random.choice(messages)), inline=False)
+        embed.set_footer(text="Asked by {}".format(ctx.message.author.name))
+        await ctx.send(embed=embed)
         print (f"{ctx.message.author.name} used the magic 8-Ball in {ctx.guild.name}! ({ctx.message.content})")
     # 8-Ball
 
