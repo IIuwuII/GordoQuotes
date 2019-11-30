@@ -162,9 +162,9 @@ async def gordoalt(ctx):
         if member.avatar == None:
             defaultmembers += 1
     complete = ["ATTENTION ALL ADMINS: GORDO ALT IN GENERAL!"]
-    if defaultmembers = 0:
+    if defaultmembers == 0:
         complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, NO GORDO ALTS FOUND")
-    elif defaultmembers = 1:
+    elif defaultmembers == 1:
         complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, {defaultmembers} GORDO ALT FOUND")
     else:
         complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, {defaultmembers} GORDO ALTS FOUND")
