@@ -19,7 +19,7 @@ bot.remove_command("help")
  
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name=";help | Keylogging Keto"))
+    await bot.change_presence(activity=discord.Game(name="On a date with Gordi AI..."))
     print('------')
     print('Ready!')
     print('------')
@@ -135,7 +135,6 @@ async def ramsquote(ctx):
 @cooldown(1, 16)  # 1000 second cooldown
 async def gordoalt(ctx):
     message = await ctx.send('SCANNING FOR GORDO ALTS...')
-    await message.edit(content='SCANNING FOR GORDO ALTS...')
     await asyncio.sleep(2)
     await message.edit(content='10%  [▰▱▱▱▱▱▱▱▱▱]')
     await asyncio.sleep(0.5)
