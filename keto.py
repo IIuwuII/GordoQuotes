@@ -95,35 +95,45 @@ try:
     @bot.command(pass_context=True)
     async def ketoquote(ctx):
         messages = quotes.keto
-        await ctx.send(random.choice(messages))
+        embed=discord.Embed(title="", description=random.choice(messages))
+        embed.set_footer(text="Keto requested by {}".format(ctx.message.author.name))
+        await ctx.send(embed=embed)
         print (f"{ctx.message.author.name} requested a Keto quote in {ctx.guild.name}!")
     # Keto Quotes
 
     @bot.command(pass_context=True)
     async def humanquote(ctx):
         messages = quotes.human
-        await ctx.send(random.choice(messages))
+        embed=discord.Embed(title="", description=random.choice(messages))
+        embed.set_footer(text="Human requested by {}".format(ctx.message.author.name))
+        await ctx.send(embed=embed)
         print (f"{ctx.message.author.name} requested a Human quote in {ctx.guild.name}!")
     # Human Quotes
 
     @bot.command(pass_context=True)
     async def gaynasaquote(ctx):
         messages = quotes.gaynasa
-        await ctx.send(random.choice(messages))
+        embed=discord.Embed(title="", description=random.choice(messages))
+        embed.set_footer(text="Gay Nasa requested by {}".format(ctx.message.author.name))
+        await ctx.send(embed=embed)
         print (f"{ctx.message.author.name} requested a Gay Nasa quote in {ctx.guild.name}!")
     # Gay Nasa Quotes
 
     @bot.command(pass_context=True)
     async def gordoquote(ctx):
         messages = quotes.gordo
-        await ctx.send(random.choice(messages))
+        embed=discord.Embed(title="", description=random.choice(messages))
+        embed.set_footer(text="Gordo requested by {}".format(ctx.message.author.name))
+        await ctx.send(embed=embed)
         print (f"{ctx.message.author.name} requested a Gordo quote in {ctx.guild.name}!")
     # Gordo Quotes
 
     @bot.command(pass_context=True)
     async def ramsquote(ctx):
         messages = quotes.rams
-        await ctx.send(random.choice(messages))
+        embed=discord.Embed(title="", description=random.choice(messages))
+        embed.set_footer(text="Dieter Rams requested by {}".format(ctx.message.author.name))
+        await ctx.send(embed=embed)
         print (f"{ctx.message.author.name} requested a Dieter Rams quote in {ctx.guild.name}!")
     # Diet Rams Quotes
 
