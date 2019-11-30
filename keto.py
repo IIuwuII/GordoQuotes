@@ -63,6 +63,7 @@ try:
         messages = ["Yes.", "No.", "Ask Gordo.", "Absolutely.", "Fuck no."]
         m8b = (ctx.message.content)
         embed=discord.Embed(title="Magic 8-Ball")
+        embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/Keto-Bot/master/8ballgordo.png")
         embed.add_field(name="Question:", value=(m8b.replace(';m8b','')), inline=False)
         embed.add_field(name="Answer:", value=(random.choice(messages)), inline=False)
         embed.set_footer(text="Asked by {}".format(ctx.message.author.name))
