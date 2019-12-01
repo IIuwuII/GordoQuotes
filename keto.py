@@ -188,12 +188,5 @@ async def gordoalt(ctx):
         complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, {defaultmembers} GORDO ALTS FOUND")
     await message.edit(content=random.choice(complete))
 
-@bot.command()
-async def uptime(ctx): 
-    with open('/proc/uptime', 'r') as f:
-        uptime_seconds = float(f.readline().split()[0])
-        return uptime_seconds
-        await ctx.send(uptime_seconds)
-
 import config
 bot.run(config.token, bot=True)
