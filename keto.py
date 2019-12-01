@@ -37,6 +37,11 @@ async def on_ready():
     print('------')
     print('© Toilet Cat Technologies')
     print('------')
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send(f"<@{ctx.author.id}>, that command doesn't exist. Type ``;help`` to view all my commands.")
  
 async def self_check(ctx):
     if 637090083144728576 == ctx.message.author.id:
