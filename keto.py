@@ -70,7 +70,8 @@ async def help(ctx):
     embed.add_field(name="Info", value="``github``", inline=True)
     embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
     embed.set_footer(text="© Toilet Cat Technologies | {}".format(uptime_stamp))
-    await ctx.send(embed=embed)
+    await ctx.author.send(embed=embed)
+    await ctx.send(f"<@{ctx.author.id}>, my commands have been sent to your DMs!")
     print (f"{ctx.message.author.name} requested the help embed in {ctx.guild.name}!")
 
 @bot.command(name='8b')
