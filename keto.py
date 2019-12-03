@@ -7,6 +7,7 @@ import asyncio
 from discord.ext.commands import cooldown
 import string
 import datetime
+import math
 
 start_time = datetime.datetime.utcnow() # Timestamp of when it came online
  
@@ -42,6 +43,10 @@ async def on_ready():
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send(f"<@{ctx.author.id}>, that command doesn't exist. Type ``;help`` to view all my commands.")
+        return
+    
+    if isinstance(error, commands.CommandOnCooldown):
+        await ctx.send("This command is on cooldown, please retry in {}s.".format(math.ceil(error.retry_after)))
  
 async def self_check(ctx):
     if 637090083144728576 == ctx.message.author.id:
@@ -66,7 +71,7 @@ async def help(ctx):
     embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/xstecky.github.io/master/toilet_cat.gif")
     embed.add_field(name="Prefix", value="``;``", inline=False)
     embed.add_field(name="Quotes", value="``ketoquote`` ``humanquote`` ``gaynasaquote`` ``gordoquote`` ``ramsquote``", inline=False)
-    embed.add_field(name="Fun", value="``8b`` ``gordoalt``", inline=True)
+    embed.add_field(name="Fun", value="``8b`` ``didiask``", inline=True)
     embed.add_field(name="Info", value="``github``", inline=True)
     embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
     embed.set_footer(text="© Toilet Cat Technologies | {}".format(uptime_stamp))
@@ -151,42 +156,24 @@ async def ramsquote(ctx):
     print (f"{ctx.message.author.name} requested a Dieter Rams quote in {ctx.guild.name}!")
 
 @bot.command()
-@cooldown(1, 16)  # 1000 second cooldown
-async def gordoalt(ctx):
-    message = await ctx.send('SCANNING FOR GORDO ALTS...')
-    await asyncio.sleep(2)
-    await message.edit(content='10%  [▰▱▱▱▱▱▱▱▱▱]')
-    await asyncio.sleep(0.5)
-    await message.edit(content='20%  [▰▰▱▱▱▱▱▱▱▱]')
-    await asyncio.sleep(0.5)
-    await message.edit(content='30%  [▰▰▰▱▱▱▱▱▱▱]')
+@cooldown(1, 10)
+async def didiask(ctx):
+    iask = [":warning: **UNABLE TO FIND WHERE I ASKED** :warning:", ":octagonal_sign: **UNABLE TO FIND WHERE I ASKED** :octagonal_sign:"]
+    message = await ctx.send('Attempting to find ``where I asked``...')
+    await asyncio.sleep(3)
+    await message.edit(content=':warning: **UNABLE TO FIND WHERE I ASKED** :warning:')
     await asyncio.sleep(1)
-    await message.edit(content='40%  [▰▰▰▰▱▱▱▱▱▱]')
-    await asyncio.sleep(2)
-    await message.edit(content='50%  [▰▰▰▰▰▱▱▱▱▱]')
+    await message.edit(content=':octagonal_sign: **UNABLE TO FIND WHERE I ASKED** :octagonal_sign:')
     await asyncio.sleep(1)
-    await message.edit(content='60%  [▰▰▰▰▰▰▱▱▱▱]')
-    await asyncio.sleep(0.5)
-    await message.edit(content='70%  [▰▰▰▰▰▰▰▱▱▱]')
-    await asyncio.sleep(0.5)
-    await message.edit(content='80%  [▰▰▰▰▰▰▰▰▱▱]')
+    await message.edit(content=':warning: **UNABLE TO FIND WHERE I ASKED** :warning:')
     await asyncio.sleep(1)
-    await message.edit(content='90%  [▰▰▰▰▰▰▰▰▰▱]')
-    await asyncio.sleep(2)
-    await message.edit(content='100% [▰▰▰▰▰▰▰▰▰▰]')
-    await asyncio.sleep(2)
-    defaultmembers = 0
-    for member in ctx.guild.members:
-        if member.avatar == None:
-            defaultmembers += 1
-    complete = ["ATTENTION ALL ADMINS: GORDO ALT IN GENERAL!"]
-    if defaultmembers == 0:
-        complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, NO GORDO ALTS FOUND")
-    elif defaultmembers == 1:
-        complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, {defaultmembers} GORDO ALT FOUND")
-    else:
-        complete.append(f"{len(ctx.guild.members)} MEMBERS SCANNED, {defaultmembers} GORDO ALTS FOUND")
-    await message.edit(content=random.choice(complete))
+    await message.edit(content=':octagonal_sign: **UNABLE TO FIND WHERE I ASKED** :octagonal_sign:')
+    await asyncio.sleep(1)
+    await message.edit(content=':warning: **UNABLE TO FIND WHERE I ASKED** :warning:')
+    await asyncio.sleep(1)
+    await message.edit(content=':octagonal_sign: **UNABLE TO FIND WHERE I ASKED** :octagonal_sign:')
+    await asyncio.sleep(1)
+    await message.edit(content=random.choice(iask))
 
 import config
 bot.run(config.token, bot=True)
