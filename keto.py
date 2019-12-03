@@ -106,7 +106,7 @@ async def github(ctx):
 async def ping(ctx):
     ping = bot.latency
     ping = ping * 1000
-    ping = round(ping, 4)
+    ping = round(ping, 1)
     await ctx.send(f"{ping} ms.")
 
 @commands.check(self_check)
