@@ -72,7 +72,7 @@ async def help(ctx):
     embed.add_field(name="Prefix", value="``;``", inline=False)
     embed.add_field(name="Quotes", value="``ketoquote`` ``humanquote`` ``gaynasaquote`` ``gordoquote`` ``ramsquote``", inline=False)
     embed.add_field(name="Fun", value="``8b`` ``didiask``", inline=True)
-    embed.add_field(name="Info", value="``github``", inline=True)
+    embed.add_field(name="Info", value="``github`` ``ping``", inline=True)
     embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
     embed.set_footer(text="© Toilet Cat Technologies | {}".format(uptime_stamp))
     await ctx.author.send(embed=embed)
@@ -101,6 +101,13 @@ async def say(ctx, *, text):
 async def github(ctx):
     await ctx.send('https://github.com/xstecky/Keto-Bot')
     print (f"{ctx.message.author.name} requested the GitHub URL in {ctx.guild.name}!")
+
+@bot.command()
+async def ping(ctx):
+    ping = bot.latency
+    ping = ping * 1000
+    ping = round(ping, 4)
+    await ctx.send(f"{ping} ms.")
 
 @commands.check(self_check)
 @bot.command()
