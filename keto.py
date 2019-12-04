@@ -185,9 +185,9 @@ async def didiask(ctx):
     await message.edit(content=random.choice(iask))
 
 @bot.command()
-async def kpop():
+async def kpop(ctx):
     """Send A KPOP gif"""
-    await bot.say(kpop_backend())
+    await ctx.send(kpop_backend())
 
 def kpop_backend():
     """snek yiff"""
