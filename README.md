@@ -19,3 +19,5 @@ Finally, run the bot on your computer and invite the bot to your Discord server.
 [Human1895](https://github.com/Human1895)
 
 [Cr3atable](https://github.com/Cr3atable)
+
+[SantaClara2016](https://github.com/SantaClara2016)

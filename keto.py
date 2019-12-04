@@ -73,7 +73,7 @@ async def help(ctx):
     embed.set_thumbnail(url="https://raw.githubusercontent.com/xstecky/xstecky.github.io/master/toilet_cat.gif")
     embed.add_field(name="Prefix", value="``;``", inline=False)
     embed.add_field(name="Quotes", value="``ketoquote`` ``humanquote`` ``gaynasaquote`` ``gordoquote`` ``ramsquote``", inline=False)
-    embed.add_field(name="Fun", value="``8b`` ``didiask``", inline=True)
+    embed.add_field(name="Fun", value="``8b`` ``didiask`` ``kpop``", inline=True)
     embed.add_field(name="Info", value="``github`` ``ping``", inline=True)
     embed.add_field(name="Other", value="``say`` ``changegame``", inline=True)
     embed.set_footer(text="© Toilet Cat Technologies | {}".format(uptime_stamp))
@@ -184,31 +184,24 @@ async def didiask(ctx):
     await asyncio.sleep(1)
     await message.edit(content=random.choice(iask))
 
+@cooldown(1, 10)
 @bot.command()
 async def kpop(ctx):
-    """Send A KPOP gif"""
-    await ctx.send(kpop_backend())
-
+#    hearts = [":revolving_hearts:", ":heart_exclamation:", ":heartbeat:", ":two_hearts:"]
+    await ctx.send(f"Here you go, <@{ctx.message.author.id}>! :revolving_hearts:\n%s" % kpop_backend())
+#    await ctx.send(f"Here you go, <@{ctx.message.author.id}>!" ".format(random.choice(hearts))\n%s" % kpop_backend())
 def kpop_backend():
-    """snek yiff"""
-    
-    apikey = "LIVDSRZULELA"  # test value
+    apikey = (config.api)
     lmt = 25
     search_term = "kpop"
-
-    # get the top 8 GIFs for the search term
     r = requests.get(
         "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, apikey, lmt))
-
     if r.status_code == 200:
-        # load the GIFs using the urls for the smaller GIF sizes
         top_8gifs = json.loads(r.content)
-        #print(top_8gifs['results'])
         goodcontent=top_8gifs['results']
         return random.choice(goodcontent)['url']
     else:
-        return 'Error: Couldnt find image.'
-
+        return False
 
 import config
 bot.run(config.token, bot=True)
