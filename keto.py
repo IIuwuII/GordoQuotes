@@ -8,6 +8,8 @@ from discord.ext.commands import cooldown
 import string
 import datetime
 import math
+import requests
+import json
 
 start_time = datetime.datetime.utcnow() # Timestamp of when it came online
  
@@ -181,6 +183,32 @@ async def didiask(ctx):
     await message.edit(content=':octagonal_sign: **UNABLE TO FIND WHERE I ASKED** :octagonal_sign:')
     await asyncio.sleep(1)
     await message.edit(content=random.choice(iask))
+
+@bot.command()
+async def kpop(ctx):
+    """Send A KPOP gif"""
+    await ctx.send(kpop_backend())
+
+def kpop_backend():
+    """snek yiff"""
+    
+    apikey = "LIVDSRZULELA"  # test value
+    lmt = 25
+    search_term = "kpop"
+
+    # get the top 8 GIFs for the search term
+    r = requests.get(
+        "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, apikey, lmt))
+
+    if r.status_code == 200:
+        # load the GIFs using the urls for the smaller GIF sizes
+        top_8gifs = json.loads(r.content)
+        #print(top_8gifs['results'])
+        goodcontent=top_8gifs['results']
+        return random.choice(goodcontent)['url']
+    else:
+        return 'Error: Couldnt find image.'
+
 
 import config
 bot.run(config.token, bot=True)
